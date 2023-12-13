@@ -16,12 +16,12 @@
 }
 
 #a {
-  color: #065471;
+  color: #FFF9EA;
   font-weight: bold;
 }
 
 #AccountText {
-  color: #065471 !important;
+  color: #FFF9EA !important;
   font-weight: bold;
   text-align: center !important;
 }
@@ -54,7 +54,7 @@
       overflow: hidden;
 
       .login-inner-container {
-        background-color: #dbf0fe;
+        background-color: #ffc853;
         width: 100%;
         form {
           padding: 2rem;
@@ -75,17 +75,17 @@
           margin: 32px 0 0;
           height: 42px;
           font-size: 16px;
-          background-color: #065471 !important;
+          background-color: #FFF9EA !important;
           color: #dbf0fe !important;
         }
 
         button:hover {
-          background-color: #dbf0fe !important ;
+          background-color: #858585 !important ;
           color: #065471 !important;
         }
 
         .dark_text {
-          color: #c5c5c5;
+          color: #797777;
           font-size: 9pt;
         }
 
