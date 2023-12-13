@@ -4,7 +4,7 @@
 
 
 #AccountText{
-  color: #065471 !important;
+  color: #575757 !important;
   font-weight: bold;
   text-align: center !important;
 }
@@ -14,7 +14,7 @@
 }
 
 #a{
-  color:#065471;
+  color:#575757;
 }
 
 
@@ -46,7 +46,7 @@
       overflow: hidden;
 
       .login-inner-container {
-        background-color: #dbf0fe;
+        background-color: #ffc853;
         width: 100%;
         form {
           padding: 2rem;
@@ -67,17 +67,17 @@
           margin: 32px 0 0;
           height: 42px;
           font-size: 16px;
-          background-color: #065471 !important;
-          color: #dbf0fe !important;
+          background-color: #e9ebe5 !important;
+          color: #575757 !important;
         }
 
         button:hover {
-          background-color: #dbf0fe !important ;
-          color: #065471 !important;
+          background-color: #575757 !important ;
+          color: #e9ebe5 !important;
         }
 
         .dark_text {
-          color: #c5c5c5;
+          color: #e9ebe5;
           font-size: 9pt;
         }
 
@@ -89,7 +89,7 @@
         .title_text,
         .mat-checkbox-label {
           font-weight: 600;
-          color: #065471;
+          color: #e9ebe5;
         }
 
         .text {
