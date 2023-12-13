@@ -1,5 +1,5 @@
 o-app-header {
-  background-color: rgb(252, 199, 25) !important;
+  background-color: rgb(255, 186, 0) !important;
 }
 
 button {
@@ -13,8 +13,8 @@ table {
 
 .mat-stroked-button,
 .mat-raised-button {
-  background-color: #cfe0c3 !important;
-  color: #89acb9 !important;
+  background-color: #9c9c9c !important;
+  color: #FFD67F !important;
 }
 
 .mat-stroked-button:disabled,
@@ -23,17 +23,17 @@ table {
 }
 .mat-stroked-button:hover,
 .mat-raised-button:hover {
-  background-color: #065471 !important;
-  color: #dbf0fe !important;
+  background-color: rgb(228, 204, 138) !important;
+  color: #636363 !important;
 }
 
 .mat-sort-header-button,
 .mat-footer-cell {
-  color: #032a38 !important;
+  color: #383003 !important;
 }
 
 .mat-cell {
-  color: #235164 !important;
+  color: rgb(145, 113, 52),  !important;
 }
 
 .mat-footer-row {
@@ -45,7 +45,7 @@ tbody .mat-row:nth-child(2n) {
 }
 
 tbody .mat-row:nth-child(2n + 1) {
-  background-color: #dbf0fe !important;
+  background-color: #fffcfc !important;
 }
 
 .o-form-toolbar .mat-toolbar {
@@ -53,19 +53,19 @@ tbody .mat-row:nth-child(2n + 1) {
 }
 
 .mat-form-field-flex {
-  background-color: #dbf0fe !important;
+  background-color: #fffcfc !important;
 }
 
 .o-combo-options-container {
-  background-color: #dbf0fe;
+  background-color: #fffcfc;
 }
 
 .mat-calendar {
-  background-color: #dbf0fe;
+  background-color: #fffcfc;
 }
 
 .o-container-title {
-  color: #032a38 !important;
+  color: #d6af00 !important;
   font-weight: bold !important;
   font-size: 1.8rem;
 }
@@ -126,7 +126,7 @@ tbody .mat-row:nth-child(2n + 1) {
 }
 
 o-combo-search {
-  background-color: #dbf0fe !important;
+  background-color: #fffcfc !important;
 }
 
 .o-list-container {
@@ -153,7 +153,7 @@ div.ng-star-inserted {
 }
 
 .mat-dialog-container {
-  background-color:#98b9ca !important;
+  background-color:#cab898 !important;
 }
 
 .img img{
