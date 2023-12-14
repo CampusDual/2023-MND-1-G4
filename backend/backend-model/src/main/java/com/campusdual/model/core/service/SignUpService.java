@@ -30,11 +30,13 @@ public class SignUpService implements ISignUpService {
             String confirmPassword = (String) attrMap.get("CONFIRM_PASS");
 
             if (!password.equals(confirmPassword)){
-                EntityResult errorEr = new EntityResultMapImpl();
-                errorEr.setCode(EntityResult.OPERATION_WRONG);
-                errorEr.setMessage("ERROR_NOT_MATCHING_PASSWORDS");
-                return errorEr;
+                return createErrorResult("ERROR_NOT_MATCHING_PASSWORDS");
             }
+
+            if (!isPasswordCorrect(password)) {
+                return createErrorResult("ERROR_WEAK_PASSWORD");
+            }
+
             EntityResult insertQuery = this.daoHelper.insert(userDao, attrMap);
 
             String user = (String) attrMap.get(UserDao.ID);
@@ -45,11 +47,34 @@ public class SignUpService implements ISignUpService {
             EntityResult insertUserRoleQuery = userRoleDao.insert(userRoleKV);
 
             return  insertQuery;
-        }catch (org.springframework.dao.DuplicateKeyException exception){
-            EntityResult errorEr = new EntityResultMapImpl();
-            errorEr.setCode(EntityResult.OPERATION_WRONG);
-            errorEr.setMessage("ERROR_DUPLICATE_USER_NAME");
-            return errorEr;
+        } catch (org.springframework.dao.DuplicateKeyException exception){
+            return createErrorResult("ERROR_DUPLICATE_USER_NAME");
         }
+    }
+
+    private EntityResult createErrorResult(String errorMessage) {
+        EntityResult errorEr = new EntityResultMapImpl();
+        errorEr.setCode(EntityResult.OPERATION_WRONG);
+        errorEr.setMessage(errorMessage);
+        return errorEr;
+    }
+
+    private boolean isPasswordCorrect(String password) {
+        if (password.length() < 8) {
+            return false;
+        }
+        if (!password.matches(".*[a-z]+.*")) {
+            return false;
+        }
+        if (!password.matches(".*[A-Z]+.*")) {
+            return false;
+        }
+        if (!password.matches(".*\\d+.*")) {
+            return false;
+        }
+        if (!password.matches(".*[!@#$%^&*()_+\\-=\\[\\]{};':\"\\\\|,.<>\\/?]+.*")) {
+            return false;
+        }
+        return true;
     }
 }
