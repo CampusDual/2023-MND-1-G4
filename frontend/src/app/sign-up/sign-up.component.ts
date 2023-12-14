@@ -12,6 +12,7 @@ import { Observable } from 'rxjs';
 })
 export class SignUpComponent implements OnInit{
   protected userService: OntimizeService;
+  showPasswordRequirements: string = '';
   @ViewChild("signUpForm", { static: false }) signUpForm: OFormComponent;
   
   constructor(
@@ -34,4 +35,12 @@ export class SignUpComponent implements OnInit{
   public async signUpUser(){
       this.signUpForm.insert();
   }
+
+   showPasswordHints() {
+    this.showPasswordRequirements = 'La contraseña debe tener al menos 8 caracteres, una mayúscula, una minúscula, un número y un carácter especial.';
+  }
+  hidePasswordHints() {
+    this.showPasswordRequirements = '';
+  }
+
 }
