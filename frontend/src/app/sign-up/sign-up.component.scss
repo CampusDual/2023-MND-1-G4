@@ -97,6 +97,16 @@
           font-size: 12px;
           font-weight: normal;
         }
+         
+        .password-message {
+          font-size: 10px ;
+          font-weight: normal;
+          max-width: 350px;
+          padding: 0px;
+          margin-bottom: 5px;
+          color: black;
+          text-align: justify;
+        }  
       }
     }
   }
