@@ -106,5 +106,6 @@
   "TODAY": "today",
   "IN": "",
   "DAYS": "days",
-  "NO_SUBSCRIPTIONS": "No active subscriptions yet"
+  "NO_SUBSCRIPTIONS": "No active subscriptions yet",
+  "COMPLEX_PASS":"La contraseña no es compleja"
 }
