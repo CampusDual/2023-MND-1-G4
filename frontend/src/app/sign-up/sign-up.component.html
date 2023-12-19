@@ -46,7 +46,9 @@
             (click)="signUpUser()"></o-button>
           <p id="AccountText">{{ "ALREADY_SIGNED" | oTranslate }}
 
-            <a id="a" routerLink="/login">{{ "LOGIN" | oTranslate }}
+            <!-- <a id="a" routerLink="/login">{{ "LOGIN" | oTranslate }} -->
+            <a id="a" href="/login">{{ "LOGIN" | oTranslate }}
+              
             </a>
           </p>
         </o-form>

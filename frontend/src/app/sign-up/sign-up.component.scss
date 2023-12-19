@@ -2,6 +2,13 @@
   margin-top: 24px;
 }
 
+.lenguage {
+  position: absolute;
+  z-index: 1;
+  padding-right: 500px;
+  top: 10px;
+}
+
 
 #AccountText{
   color: #575757 !important;
@@ -59,32 +66,32 @@
         }
 
         .login-title-container {
-          margin-top: 64px;
+          margin-top:-5px;
         }
 
         button {
           width: 100%;
-          margin: 32px 0 0;
+          margin: 16px 0 0;
           height: 42px;
           font-size: 16px;
-          background-color: #e9ebe5 !important;
+          background-color: #FFF9EA !important;
           color: #575757 !important;
         }
 
         button:hover {
-          background-color:  !important ;
+          background-color: #575757 !important ;
           color: #e9ebe5 !important;
         }
 
         .dark_text {
-          color: #e9ebe5;
+          color: #797777;
           font-size: 9pt;
         }
 
         .login_info,
         .title_text {
-          font-size: 15px;
-          margin: 5px;
+          font-size: 14px;
+          margin: 3px;
         }
 
         .title_text,
