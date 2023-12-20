@@ -40,10 +40,10 @@ export const MENU_CONFIG: MenuRootItem[] = [
     icon: "power_settings_new",
     confirm: "yes",
   },
-  // {
-  //   id: "delete-account",
-  //   name: "DELETE",
-  //   icon: "person_remove",
-  //   confirm: "yes",
-  // },
+  {
+    id: "delete-account",
+    name: "DELETE",
+    icon: "person_remove",
+    confirm: "yes",
+  },
 ];

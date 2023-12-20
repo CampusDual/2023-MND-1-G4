@@ -72,5 +72,13 @@ public class UserService implements IUserService {
 		userToShareKV.put(SQLStatementBuilder.ExtendedSQLConditionValuesProcessor.EXPRESSION_KEY, filterBE);
 	return this.daoHelper.query(this.userDao,userToShareKV,attrList,UserDao.USERS_TO_SHARE_QUERY);
 	}
+	@Secured({ PermissionsProviderSecured.SECURED })
+	public EntityResult deleteCurrentUserAccount() {
+		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+		String username = authentication.getName();
+		Map<String, Object> keyMap = new HashMap<>();
+		keyMap.put("username_column_name", username); //
+		return this.daoHelper.delete(this.userDao, keyMap);
+	}
 
 }
