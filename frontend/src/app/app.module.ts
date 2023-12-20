@@ -14,7 +14,6 @@ import { CONFIG } from "./app.config";
 import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from "@angular/material";
 import { MatDialogModule } from '@angular/material/dialog';
 import { AlertDialogComponent } from "./main/alerts/alert-dialog/alert-dialog.component";
-import { DeleteAccountComponent } from './delete-account/delete-account.component';
 
 // Standard providers...
 // Defining custom providers (if needed)...
@@ -30,7 +29,7 @@ export const customProviders: any = [];
       enabled: environment.production,
     }),
   ],
-  declarations: [AppComponent, AlertDialogComponent, DeleteAccountComponent],
+  declarations: [AppComponent, AlertDialogComponent,],
   bootstrap: [AppComponent],
   providers: [
     { provide: APP_CONFIG, useValue: CONFIG },
