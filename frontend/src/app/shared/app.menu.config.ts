@@ -34,6 +34,12 @@ export const MENU_CONFIG: MenuRootItem[] = [
     route: "/main/custom-platform",
   },
   {
+    id: "notice",
+    name: "NOTICE",
+    icon: "newspaper",
+    route: "/main/notice",
+  },
+  {
     id: "logout",
     name: "LOGOUT",
     route: "/login",

@@ -104,6 +104,10 @@ export const routes: Routes = [
               permissionId: "custom-platform-table-route"
             }
           }
+      },
+      { path: 'notice', loadChildren: () => import('./notice/notice.module').then((
+          m) => m.NoticeModule
+          ),
       }
     ],
   },

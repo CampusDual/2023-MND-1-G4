@@ -108,5 +108,6 @@
   "NO_SUBSCRIPTIONS": "Todavia no tienes suscripciones activas",
   "PASSWORD_MESSAGE":  "La contraseña debe tener al menos 8 caracteres, una mayúscula, una minúscula, un número y un carácter especial.",
   "ERROR_WEAK_PASSWORD": "La contraseña es débil",
-  "DELETE": "Borrar cuenta"
+  "DELETE": "Borrar cuenta",
+  "NOTICE": "Noticias"
 }
