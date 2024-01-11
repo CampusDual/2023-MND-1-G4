@@ -1,41 +1,43 @@
-package com.campusdual.api.core.service;
+package com.campusdual.model.core.service;
 
+import com.campusdual.api.core.service.INoticeService;
+
+import com.campusdual.model.core.dao.*;
 import com.ontimize.jee.common.dto.EntityResult;
+import com.ontimize.jee.common.exceptions.OntimizeJEERuntimeException;
+import com.ontimize.jee.server.dao.DefaultOntimizeDaoHelper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Map;
 
-@Service
+@Lazy
+@Service("NoticeService")
 public class NoticeService implements INoticeService {
 
-    @Override
-    public EntityResult noticeQuery(Map<?, ?> keyMap, List<?> attrList) {
-        // Lógica para consultar una novedad específica según la clave proporcionada
-        return null; // Aquí deberías devolver el resultado de la consulta
-    }
+    @Autowired
+    private NoticeDao noticeDao;
+
+    @Autowired
+    private DefaultOntimizeDaoHelper daoHelper;
 
     @Override
-    public EntityResult noticeAllQuery(Map<?, ?> keyMap, List<?> attrList) {
-        // Lógica para consultar todas las novedades
-        return null; // Devuelve el resultado de la consulta
+    public EntityResult noticeQuery(Map<String, Object> keysValues, List<String> attributes) throws OntimizeJEERuntimeException {
+        return this.daoHelper.query(this.noticeDao, keysValues, attributes);
     }
-
     @Override
-    public EntityResult noticeInsert(Map<?, ?> attrMap) {
-        // Lógica para insertar una nueva novedad con los atributos proporcionados
-        return null; // Devuelve el resultado de la inserción
+    public EntityResult noticeInsert(Map<String, Object> attrMap) throws OntimizeJEERuntimeException {
+        return this.daoHelper.insert(this.noticeDao, attrMap);
     }
-
     @Override
-    public EntityResult noticeUpdate(Map<?, ?> attrMap, Map<?, ?> keyMap) {
-        // Lógica para actualizar una novedad según los atributos y clave proporcionados
-        return null; // Devuelve el resultado de la actualización
+    public EntityResult noticeUpdate(Map<String, Object> attrMap, Map<String, Object> keyMap)
+            throws OntimizeJEERuntimeException {
+        return this.daoHelper.update(this.noticeDao, attrMap, keyMap);
     }
-
     @Override
-    public EntityResult noticeDelete(Map<?, ?> keyMap) {
-        // Lógica para eliminar una novedad según la clave proporcionada
-        return null; // Devuelve el resultado de la eliminación
+    public EntityResult noticeDelete(Map<String, Object> keyMap) throws OntimizeJEERuntimeException {
+        return this.daoHelper.delete(this.noticeDao, keyMap);
     }
 }

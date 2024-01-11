@@ -1,59 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Tablón de Anuncios</title>
-    <style>
-        /* Estilos básicos para el tablón de anuncios */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 20px;
-        }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
-    </style>
-</head>
-<body>
-
-<h1>Tablón de Anuncios</h1>
-
-<table>
-    <thead>
-        <tr>
-            <th>Título</th>
-            <th>Descripción</th>
-            <th>Fecha</th>
-            <!-- Puedes agregar más encabezados si tienes más datos -->
-        </tr>
-    </thead>
-    <tbody id="tabla-anuncios">
-        <!-- Aquí se agregarán dinámicamente las filas de anuncios -->
-        <tr>
-            <td>Ejemplo de Título 1</td>
-            <td>Descripción del anuncio 1</td>
-            <td>10/01/2024</td>
-            <!-- Puedes agregar más celdas si tienes más datos -->
-        </tr>
-        <tr>
-            <td>Ejemplo de Título 2</td>
-            <td>Descripción del anuncio 2</td>
-            <td>09/01/2024</td>
-            <!-- Puedes agregar más celdas si tienes más datos -->
-        </tr>
-        <!-- Repite esta estructura por cada anuncio que tengas -->
-    </tbody>
-</table>
-
-</body>
-</html>
+<o-list #list attr="noticelist" title="NOTICE" service="notices" entity="notice"
+  keys="NOTICEID" columns="NOTICEID;PHOTO;TITLE;DESCRIPTION;DATE">
+  <mat-card *ngFor="let rowData of list.dataArray" [o-list-item]="rowData">
+    <mat-card-header>
+      <div mat-card-avatar>
+        <img matListAvatar fxFill src="./assets/images/ontimize.png">
+      </div>
+      <mat-card-title></mat-card-title>
+      <mat-card-subtitle></mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+        aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </mat-card-content>
+  </mat-card>
+</o-list>
