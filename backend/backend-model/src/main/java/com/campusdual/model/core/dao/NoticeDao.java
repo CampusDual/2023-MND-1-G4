@@ -11,10 +11,8 @@ import org.springframework.stereotype.Repository;
 
 public class NoticeDao extends OntimizeJdbcDaoSupport {
 
-    public static final String ID = "ID";
-    public static final String USERID = "USER_";
-    public static final String SID= "S_ID";
-    public static final String NDESCRIPTION = "N_DESCRIPTION";
-    public static final String NTITULO = "N_TITULO";
-    public static final String NFECHA = "N_FECHA";
+    public static final String ID = "NOTICE_ID";
+    public static final String DESCRIPTION = "NOTICE_DESCRIPTION";
+    public static final String TITLE = "NOTICE_TITLE";
+
 }

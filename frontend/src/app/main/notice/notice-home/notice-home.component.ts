@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { OntimizeService } from 'ontimize-web-ngx';
 
 @Component({
   selector: 'app-notice-home',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NoticeHomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private ontimizeService: OntimizeService) {}
 
   ngOnInit() {
+    this.loadNoticeData();
   }
 
+  loadNoticeData(): void {
+    this.ontimizeService.configureService('notice');
+    this.ontimizeService.query().subscribe
+  }
 }

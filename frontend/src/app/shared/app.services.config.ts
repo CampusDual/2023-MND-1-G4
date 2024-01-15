@@ -41,4 +41,8 @@ export const SERVICE_CONFIG: Object = {
   subLapseCustoms: {
     path: "/subLapseCustoms",
   },
+  notices: {
+    path: "/notice",
+  }
+  
 };

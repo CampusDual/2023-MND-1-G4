@@ -1,16 +1,14 @@
-<o-list #list attr="noticelist" title="NOTICE" service="notices" entity="notice"
-  keys="NOTICEID" columns="NOTICEID;PHOTO;TITLE;DESCRIPTION;DATE">
-  <mat-card *ngFor="let rowData of list.dataArray" [o-list-item]="rowData">
-    <mat-card-header>
-      <div mat-card-avatar>
-        <img matListAvatar fxFill src="./assets/images/ontimize.png">
-      </div>
-      <mat-card-title></mat-card-title>
-      <mat-card-subtitle></mat-card-subtitle>
-    </mat-card-header>
-    <mat-card-content>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-        aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </mat-card-content>
-  </mat-card>
-</o-list>
+<div fxFill fxLayout="column" fxLayoutAlign="start">
+    <o-table
+      attr="noticeTable"
+      delete-button="no"
+      refresh-button="no"
+      service="notice"
+      entity="notice"
+      keys="NOTICE_ID"
+      columns="NOTICE_ID;NOTICE_TITLE;NOTICE_DESCRIPTION;NOTICE_IMG"
+      visible-columns="NOTICE_TITLE;NOTICE_DESCRIPTION"
+      query-rows="15"
+    >
+  
+

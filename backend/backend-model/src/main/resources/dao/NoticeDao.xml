@@ -3,14 +3,14 @@
         xmlns="http://www.ontimize.com/schema/jdbc"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.ontimize.com/schema/jdbc http://www.ontimize.com/schema/jdbc/ontimize-jdbc-dao.xsd"
-        catalog="" schema="${mainschema}" table="CANDIDATE"
+        catalog="" schema="${mainschema}" table="NOTICE"
         datasource="mainDataSource" sqlhandler="dbSQLStatementHandler">
 
     <DeleteKeys>
-        <Column>ID</Column>
+        <Column>NOTICE_ID</Column>
     </DeleteKeys>
     <UpdateKeys>
-        <Column>ID</Column>
+        <Column>NOTICE_ID</Column>
     </UpdateKeys>
-    <GeneratedKey>ID</GeneratedKey>
+    <GeneratedKey>NOTICE_ID</GeneratedKey>
 </JdbcEntitySetup>
