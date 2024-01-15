@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
 import { OntimizeService } from 'ontimize-web-ngx';
 
 @Component({
@@ -8,14 +9,24 @@ import { OntimizeService } from 'ontimize-web-ngx';
 })
 export class NoticeHomeComponent implements OnInit {
 
-  constructor(private ontimizeService: OntimizeService) {}
+
+  constructor(private ontimizeService: OntimizeService, protected sanitizer: DomSanitizer) {}
 
   ngOnInit() {
-    this.loadNoticeData();
+    // this.loadNoticeData();
   }
 
-  loadNoticeData(): void {
-    this.ontimizeService.configureService('notice');
-    this.ontimizeService.query().subscribe
+  // loadNoticeData(): void {
+  //   this.ontimizeService.configureService('notice');
+  //   this.ontimizeService.query().subscribe
+  // }
+
+  public getImageSrc(imgData: any): any {
+    return imgData ? this.sanitizer.bypassSecurityTrustResourceUrl('data:image/*;base64,' + imgData.bytes) : './assets/images/subsify_round_logo.png"';
   }
+
+  public getEmptyImageSrc(): any {
+    return "../../../../assets/images/subsify_round_logo.png";
+  }
+
 }

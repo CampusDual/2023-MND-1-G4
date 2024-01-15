@@ -15,4 +15,8 @@ public class NoticeDao extends OntimizeJdbcDaoSupport {
     public static final String DESCRIPTION = "NOTICE_DESCRIPTION";
     public static final String TITLE = "NOTICE_TITLE";
 
+    public static final String DATE = "NOTICE_DATE";
+
+    public static final String LANGUAGE = "NOTICE_LANGUAGE";
+
 }

@@ -12,5 +12,5 @@
     <UpdateKeys>
         <Column>NOTICE_ID</Column>
     </UpdateKeys>
-    <GeneratedKey>NOTICE_ID</GeneratedKey>
+    <GeneratedKey>notice_id</GeneratedKey>
 </JdbcEntitySetup>

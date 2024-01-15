@@ -1,14 +1,32 @@
-<div fxFill fxLayout="column" fxLayoutAlign="start">
-    <o-table
-      attr="noticeTable"
-      delete-button="no"
-      refresh-button="no"
-      service="notice"
-      entity="notice"
-      keys="NOTICE_ID"
-      columns="NOTICE_ID;NOTICE_TITLE;NOTICE_DESCRIPTION;NOTICE_IMG"
-      visible-columns="NOTICE_TITLE;NOTICE_DESCRIPTION"
-      query-rows="15"
-    >
-  
+<o-list #list attr="noticeTable" title="{{ 'NOTICE_BOARD' | oTranslate }}" service="notice" entity="notice"
+keys="NOTICE_ID" refresh-button="true" insert-button="true" insert-button-position = "botton" columns="NOTICE_ID;NOTICE_TITLE;NOTICE_DESCRIPTION;NOTICE_IMG;NOTICE_DATE" quick-filter-columns="NOTICE_TITLE;NOTICE_DESCRIPTION">
+
+  <mat-card *ngFor="let row of list.dataArray" [o-list-item]="row">
+    <mat-card-header>
+      <!-- <div mat-card-avatar>
+        <img alt="" src="{{ row.NOTICE_IMG }}" fxFill />
+      </div> -->
+
+      <!-- <o-image attr="image" class="img2" [data]="{{ row.NOTICE_IMG }}" *ngIf="{{ row.NOTICE_IMG }}" auto-fit="true" enabled="false"
+      read-only="true" show-controls="false" full-screen-button="false"
+      empty-image="./assets/images/subsify_round_logo.png">
+      </o-image>  -->
+
+      <div *ngIf="row.NOTICE_IMG != null" mat-card-avatar>
+        <img [src]="getImageSrc(row.NOTICE_IMG)" alt="" width="40px" height="40px" />
+      </div>
+
+
+      <div *ngIf="row.NOTICE_IMG == null" mat-card-avatar>
+        <img [src]="getEmptyImageSrc()" alt="" width="40px" height="40px"/>
+      </div>
+
+      <mat-card-title>{{ row.NOTICE_TITLE }}</mat-card-title>
+      <mat-card-subtitle>{{ row.NOTICE_DESCRIPTION }}</mat-card-subtitle>
+      <div>{{ row.NOTICE_DATE | date:'short'  }}</div>
+    </mat-card-header>
+  </mat-card>
+
+</o-list>
+
 

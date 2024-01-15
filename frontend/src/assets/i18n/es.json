@@ -109,5 +109,11 @@
   "PASSWORD_MESSAGE":  "La contraseña debe tener al menos 8 caracteres, una mayúscula, una minúscula, un número y un carácter especial.",
   "ERROR_WEAK_PASSWORD": "La contraseña es débil",
   "DELETE": "Borrar cuenta",
-  "NOTICE": "Noticias"
+  "NOTICE": "Noticias",
+  "NOTICE_TITLE":"Título",
+  "NOTICE_DESCRIPTION":"Descripción",
+  "NOTICE_BOARD":"Tablón de noticias",
+  "NOTICE_DATE": "Fecha",
+  "NEW_NOTICE": "Nueva noticia",
+  "LANGUAGE": "Lenguaje"
 }

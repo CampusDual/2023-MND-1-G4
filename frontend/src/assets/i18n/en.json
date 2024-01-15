@@ -110,5 +110,12 @@
   "PASSWORD_MESSAGE": "The password must have at least 8 characters, one uppercase letter, one lowercase letter, one number, and one special character.",
   "ERROR_WEAK_PASSWORD": "The password is weak.",
   "DELETE":"Delete account",
-  "NOTICE":"Notices"
+  "NOTICE":"Notices",
+  "NOTICE_TITLE":"Title",
+  "NOTICE_DESCRIPTION":"Description",
+  "NOTICE_BOARD":"Bulletin Board",
+  "NOTICE_DATE": "Date",
+  "NEW_NOTICE": "New notice",
+  "LANGUAJE": " Language",
+  "SPANISH": "Español"
 }
