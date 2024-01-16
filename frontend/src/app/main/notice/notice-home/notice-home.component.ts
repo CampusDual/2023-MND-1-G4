@@ -19,6 +19,7 @@ export class NoticeHomeComponent implements OnInit {
   ) {}
 
   ngOnInit() {
+    this.idiomaActual = this.translate.getCurrentLang() || 'es';
     // this.loadNoticeData();
   }
 
