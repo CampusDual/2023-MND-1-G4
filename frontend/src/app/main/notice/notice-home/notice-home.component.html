@@ -1,5 +1,5 @@
 <o-list class="listanoticias" #list attr="noticeTable" title="{{ 'NOTICE_BOARD' | oTranslate }}" service="notice" entity="notice"
-keys="NOTICE_ID" refresh-button="true" insert-button="true" insert-button-position = "botton" columns="NOTICE_ID;NOTICE_TITLE_SPANISH;NOTICE_TITLE_ENGLISH;NOTICE_DESCRIPTION_SPANISH;NOTICE_DESCRIPTION_ENGLISH;NOTICE_IMG;NOTICE_DATE" quick-filter-columns="NOTICE_TITLE_SPANISH;NOTICE_DESCRIPTION_ENGLISH">
+keys="NOTICE_ID" refresh-button="true" insert-button="true" insert-button-position = "botton" columns="NOTICE_ID;NOTICE_TITLE_SPANISH;NOTICE_TITLE_ENGLISH;NOTICE_DESCRIPTION_SPANISH;NOTICE_DESCRIPTION_ENGLISH;NOTICE_IMG;NOTICE_DATE" quick-filter-columns="">
   <mat-card *ngFor="let row of list.dataArray" [o-list-item]="row">
     <mat-card-header>
       <!-- <div mat-card-avatar>
@@ -20,8 +20,25 @@ keys="NOTICE_ID" refresh-button="true" insert-button="true" insert-button-positi
         <img [src]="getEmptyImageSrc()" alt="" width="45px" height="45px"/>
       </div>
 
+      <!-- <div *ngIf="idiomaActual === 'es'">
+        <mat-card-title>{{ row.NOTICE_TITLE_SPANISH }}</mat-card-title>
+        <mat-card-subtitle>{{ row.NOTICE_DESCRIPTION_SPANISH }}</mat-card-subtitle>
+      </div>
+  
+      <div *ngIf="idiomaActual === 'en'">
+        <mat-card-title>{{ row.NOTICE_TITLE_ENGLISH }}</mat-card-title>
+        <mat-card-subtitle>{{ row.NOTICE_DESCRIPTION_ENGLISH }}</mat-card-subtitle>
+      </div>
+      <div>{{ row.NOTICE_DATE | date:'short' }}</div>
+  </mat-card-header>
+</mat-card> -->
+      
+
+
+      
+
       <mat-card-title>{{ row.NOTICE_TITLE_SPANISH }}</mat-card-title>
-      <mat-card-subtitle>{{ row.NOTICE_DESCRIPTION_ENGLISH }}</mat-card-subtitle>
+      <mat-card-subtitle>{{ row.NOTICE_DESCRIPTION_SPANISH }}</mat-card-subtitle>
       <div>{{ row.NOTICE_DATE | date:'short'  }}</div>
     </mat-card-header>
   </mat-card>

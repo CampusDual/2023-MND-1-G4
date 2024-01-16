@@ -13,23 +13,6 @@ export class NoticeNewComponent implements OnInit {
   ngOnInit() {
   }
 
-  getDataArray() {
-    const array: Array<Object> = [];
-    array.push({
-      'key': 1,
-      'value': 'Spanish'
-    });
-    array.push({
-      'key': 2,
-      'value': 'English'
-    });
-    return array;
-  }
-
-  getValue() {
-    return 2;
-  }
-
 }
 
 
