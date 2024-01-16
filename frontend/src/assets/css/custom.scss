@@ -171,3 +171,19 @@ div.ng-star-inserted {
  
 }
 
+.o-list .mat-flat-button.mat-accent, .mat-raised-button.mat-accent, .mat-fab.mat-accent, .mat-mini-fab.mat-accent {
+  background-color:  rgb(228, 204, 138);
+}
+
+.languagesel{
+  padding-top: 30px;
+}
+
+.languagesel .mat-form-field-infix {
+  position: static;
+  padding:50px ;
+}
+
+.languagesel .mat-form-field-appearance-fill .mat-form-field-flex{
+  padding: 15px;
+}

@@ -9,14 +9,28 @@
     <o-column title="{{ 'NEW_NOTICE' | oTranslate }}" fxFlex>
       <o-row fxFlex="100">
         <o-text-input
-          attr="NOTICE_TITLE"
+          attr="NOTICE_TITLE_SPANISH"
+          fxFlex="50"
+          layout-padding
+          required="yes"  
+      ></o-text-input>   
+      </o-row>
+      <o-row fxFlex="100">
+        <o-text-input
+          attr="NOTICE_TITLE_ENGLISH"
           fxFlex="50"
           layout-padding
           required="yes"  
       ></o-text-input>   
       </o-row>
       <o-textarea-input 
-        attr="NOTICE_DESCRIPTION"
+        attr="NOTICE_DESCRIPTION_SPANISH"
+        fxFlex="50"
+        layout-padding
+        required="yes"
+    ></o-textarea-input>
+    <o-textarea-input 
+        attr="NOTICE_DESCRIPTION_ENGLISH"
         fxFlex="50"
         layout-padding
         required="yes"
@@ -30,11 +44,6 @@
         fxFlex="30"
       ></o-image>
     </o-row>
-     <!-- <o-row>
-        <o-radio class="languagesel"[static-data]="getDataArray()" 
-        [data]="getValue()" value-column="key" columns="key;value" visible-columns="value" read-only="no" required="yes"
-         layout="row"></o-radio
-    </o-row> -->
     </o-column>
   </o-row>
 </o-form>

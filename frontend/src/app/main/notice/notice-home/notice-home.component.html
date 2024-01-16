@@ -1,6 +1,5 @@
-<o-list #list attr="noticeTable" title="{{ 'NOTICE_BOARD' | oTranslate }}" service="notice" entity="notice"
-keys="NOTICE_ID" refresh-button="true" insert-button="true" insert-button-position = "botton" columns="NOTICE_ID;NOTICE_TITLE;NOTICE_DESCRIPTION;NOTICE_IMG;NOTICE_DATE" quick-filter-columns="NOTICE_TITLE;NOTICE_DESCRIPTION">
-
+<o-list class="listanoticias" #list attr="noticeTable" title="{{ 'NOTICE_BOARD' | oTranslate }}" service="notice" entity="notice"
+keys="NOTICE_ID" refresh-button="true" insert-button="true" insert-button-position = "botton" columns="NOTICE_ID;NOTICE_TITLE_SPANISH;NOTICE_TITLE_ENGLISH;NOTICE_DESCRIPTION_SPANISH;NOTICE_DESCRIPTION_ENGLISH;NOTICE_IMG;NOTICE_DATE" quick-filter-columns="NOTICE_TITLE_SPANISH;NOTICE_DESCRIPTION_ENGLISH">
   <mat-card *ngFor="let row of list.dataArray" [o-list-item]="row">
     <mat-card-header>
       <!-- <div mat-card-avatar>
@@ -13,16 +12,16 @@ keys="NOTICE_ID" refresh-button="true" insert-button="true" insert-button-positi
       </o-image>  -->
 
       <div *ngIf="row.NOTICE_IMG != null" mat-card-avatar>
-        <img [src]="getImageSrc(row.NOTICE_IMG)" alt="" width="40px" height="40px" />
+        <img [src]="getImageSrc(row.NOTICE_IMG)" alt="" width="45px" height="45px" />
       </div>
 
 
       <div *ngIf="row.NOTICE_IMG == null" mat-card-avatar>
-        <img [src]="getEmptyImageSrc()" alt="" width="40px" height="40px"/>
+        <img [src]="getEmptyImageSrc()" alt="" width="45px" height="45px"/>
       </div>
 
-      <mat-card-title>{{ row.NOTICE_TITLE }}</mat-card-title>
-      <mat-card-subtitle>{{ row.NOTICE_DESCRIPTION }}</mat-card-subtitle>
+      <mat-card-title>{{ row.NOTICE_TITLE_SPANISH }}</mat-card-title>
+      <mat-card-subtitle>{{ row.NOTICE_DESCRIPTION_ENGLISH }}</mat-card-subtitle>
       <div>{{ row.NOTICE_DATE | date:'short'  }}</div>
     </mat-card-header>
   </mat-card>

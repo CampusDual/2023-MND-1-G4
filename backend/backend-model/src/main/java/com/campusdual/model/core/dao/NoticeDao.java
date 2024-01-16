@@ -12,11 +12,11 @@ import org.springframework.stereotype.Repository;
 public class NoticeDao extends OntimizeJdbcDaoSupport {
 
     public static final String ID = "NOTICE_ID";
-    public static final String DESCRIPTION = "NOTICE_DESCRIPTION";
-    public static final String TITLE = "NOTICE_TITLE";
-
+    public static final String DESCRIPTION_SPANISH = "NOTICE_DESCRIPTION_SPANISH";
+    public static final String TITLE_SPANISH = "NOTICE_SPANISH";
+    public static final String DESCRIPTION_ENGLISH = "NOTICE_DESCRIPTION_ENGLISH";
+    public static final String TITLE_ENGLISH = "NOTICE_TITLE_ENGLISH";
     public static final String DATE = "NOTICE_DATE";
 
-    public static final String LANGUAGE = "NOTICE_LANGUAGE";
 
 }
