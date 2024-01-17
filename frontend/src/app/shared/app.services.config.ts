@@ -43,6 +43,5 @@ export const SERVICE_CONFIG: Object = {
   },
   notice: {
     path: "/notice",
-  }
-  
+  },
 };

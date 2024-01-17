@@ -108,7 +108,11 @@ export const routes: Routes = [
       { path: 'notice', loadChildren: () => import('./notice/notice.module').then((
           m) => m.NoticeModule
           ),
-      }
+      },
+      { path: 'notice-admin', loadChildren: () => import('./notice-admin/notice-admin.module').then((
+        m) => m.NoticeAdminModule
+        ),
+      },
     ],
   },
 ];

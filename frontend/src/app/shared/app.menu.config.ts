@@ -40,6 +40,12 @@ export const MENU_CONFIG: MenuRootItem[] = [
     route: "/main/notice",
   },
   {
+    id: "notice",
+    name: "NOTICE_ADMIN",
+    icon: "newspaper",
+    route: "/main/notice-admin",
+  },
+  {
     id: "logout",
     name: "LOGOUT",
     route: "/login",

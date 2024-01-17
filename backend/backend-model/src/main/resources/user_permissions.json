@@ -68,6 +68,10 @@
     {
       "permissionId": "user-home-route",
       "enabled": true
+    },
+    {
+      "permissionId": "notice-admin-home",
+      "enabled": false
     }
   ]
 }
