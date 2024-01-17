@@ -13,4 +13,16 @@
         <Column>NOTICE_ID</Column>
     </UpdateKeys>
     <GeneratedKey>notice_id</GeneratedKey>
-</JdbcEntitySetup>
+<Queries>
+<Query id="default">
+    <Sentence>
+        <![CDATA[
+                SELECT #COLUMNS#
+                from notice
+                #WHERE#
+                order by notice_date desc
+                 ]]>
+    </Sentence>
+</Query>
+</Queries>
+        </JdbcEntitySetup>
