@@ -1,5 +1,5 @@
 <o-list class="listanoticias" #list attr="noticeTable" title="{{ 'NOTICE_BOARD' | oTranslate }}" service="notice" entity="notice"
-keys="NOTICE_ID" delete-button="false" refresh-button="true" pagination-controls="true" page-size-options="2;5;10" order
+keys="NOTICE_ID" delete-button="false" refresh-button="true" pagination-controls="true" page-size-options="2;5;10" 
 columns="NOTICE_ID;NOTICE_TITLE_SPANISH;NOTICE_TITLE_ENGLISH;NOTICE_DESCRIPTION_SPANISH;NOTICE_DESCRIPTION_ENGLISH;NOTICE_IMG;NOTICE_DATE" 
 quick-filter-columns="NOTICE_TITLE_SPANISH;NOTICE_TITLE_ENGLISH;NOTICE_DESCRIPTION_SPANISH;NOTICE_DESCRIPTION_ENGLISH">
   <mat-card *ngFor="let row of list.dataArray" [o-list-item]="row">
