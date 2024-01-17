@@ -29,8 +29,17 @@
       "attr": "custom-platform",
       "visible": false,
       "enabled": false
+    },
+    {
+      "attr": "notice",
+      "visible": true,
+      "enabled": true
+    },
+    {
+      "attr": "notice-admin",
+      "visible": false,
+      "enabled": false
     }
-
   ],
   "routes": [
     {
@@ -72,6 +81,10 @@
     {
       "permissionId": "notice-admin-home",
       "enabled": false
+    },
+    {
+      "permissionId": "notice-home-route",
+      "enabled": true
     }
   ]
 }

@@ -108,10 +108,20 @@ export const routes: Routes = [
       { path: 'notice', loadChildren: () => import('./notice/notice.module').then((
           m) => m.NoticeModule
           ),
+          data:{
+            oPermission:{
+              permissionId: "notice-home-table-route"
+            }
+          }
       },
       { path: 'notice-admin', loadChildren: () => import('./notice-admin/notice-admin.module').then((
         m) => m.NoticeAdminModule
         ),
+        data:{
+          oPermission:{
+            permissionId: "notice-admin-home-route"
+          }
+        }
       },
     ],
   },
